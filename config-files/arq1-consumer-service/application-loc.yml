@@ -1,6 +1,11 @@
 # HTTP Server
 server:  
-  port: 0   # HTTP port
+  port: ${PORT:2222}   # HTTP port
+
+ping:  
+  service:
+    name: arq1-ping-service
+    pingUrl: http://${ping.service.name}/ping/doPing/
 
 eureka:
   client:
