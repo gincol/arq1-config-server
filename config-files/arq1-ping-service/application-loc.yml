@@ -1,6 +1,6 @@
 # HTTP Server
 server:  
-  port: 0   # HTTP port
+  port: ${PORT:0}   # HTTP port
 
 eureka:
   client:
@@ -26,5 +26,3 @@ management:
 swagger:
   basepackage: es.gincol.blog
   
-mongeez:
-  initialLoadingFile: mongeez.xml  
