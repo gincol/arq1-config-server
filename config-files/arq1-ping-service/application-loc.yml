@@ -2,13 +2,6 @@
 server:  
   port: 0   # HTTP port
 
-# Spring properties
-spring:  
-  application:
-    name: arq1-ping-service
-  profiles:
-    active: loc
-
 eureka:
   client:
     enabled: true

@@ -14,8 +14,8 @@ spring:
           searchPaths: 'config-files/{application}'
           clone-on-start: true
           force-pull: true
-          username: gines
-          password: g1ncOlgit
+#          username: gines
+#          password: g1ncOlgit
 
 eureka:
   client:
@@ -23,9 +23,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
-#  instance: 
-#    leaseRenewalIntervalInSeconds: 1
-#    leaseExpirationDurationInSeconds: 2
 
 management:
   endpoints:
