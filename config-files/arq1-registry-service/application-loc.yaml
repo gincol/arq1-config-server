@@ -1,11 +1,12 @@
 server:  
-  port: 8761   # HTTP port
+  port: ${PORT:8761}   # HTTP port
 
 logging:  
   file: logs/${spring.application.name}.log
   level:
     com.netflix.discovery: 'OFF'
     org.springframework.cloud: 'DEBUG'
+    org.springframework.web: 'INFO'
     es.gincol.blog: 'DEBUG'
     
 eureka:
