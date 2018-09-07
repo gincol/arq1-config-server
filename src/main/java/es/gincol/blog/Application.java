@@ -14,9 +14,9 @@ import org.springframework.core.env.SimpleCommandLinePropertySource;
 
 import es.gincol.blog.utils.Constants;
 
+@SpringBootApplication
 @EnableConfigServer
 @EnableEurekaClient
-@SpringBootApplication
 public class Application {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);

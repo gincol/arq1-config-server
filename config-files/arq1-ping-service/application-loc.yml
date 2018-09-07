@@ -1,0 +1,37 @@
+# HTTP Server
+server:  
+  port: 3333   # HTTP port
+
+# Spring properties
+spring:  
+  application:
+    name: arq1-ping-service
+  profiles:
+    active: loc
+
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+          
+logging:  
+  file: logs/${spring.application.name}.log
+  level:
+    org.springframework.cloud: 'DEBUG'
+    es.gincol.blog: 'DEBUG'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, info, health, metrics, trace
+  endpoint:
+    shutdown:
+      enabled: true
+          
+swagger:
+  basepackage: es.gincol.ms
+  
+mongeez:
+  initialLoadingFile: mongeez.xml  
