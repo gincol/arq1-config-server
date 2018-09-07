@@ -1,0 +1,44 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: arq1-config-server
+  profiles:
+    active: loc
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
+          searchPaths: 'config-files/{application}'
+          clone-on-start: true
+          force-pull: true
+          #username: gincol
+          username: gines
+          password: g1ncOlgit
+
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8761
+  instance: 
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, info, health, metrics, trace
+  endpoint:
+    shutdown:
+      enabled: true
+            
+logging:  
+  file: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    es.gincol.blog: 'DEBUG'  
