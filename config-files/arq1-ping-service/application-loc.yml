@@ -1,28 +1,32 @@
-# HTTP Server
-server:  
-  port: ${PORT:0}   # HTTP port
-
+server:
+  port: ${PORT:0}
+  
 eureka:
   client:
     enabled: true
     service-url:
       defaultZone: http://localhost:8761/eureka
-          
-logging:  
+      
+logging:
   file: logs/${spring.application.name}.log
   level:
-    org.springframework.cloud: 'DEBUG'
-    es.gincol.blog: 'DEBUG'
+    org.springframework.cloud: DEBUG
+    es.gincol.blog: DEBUG
+    
+spring:
+  boot:
+    admin:
+      client:
+        url: http://arq-admin-service
 
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, info, health, metrics, trace
+        include: '*'
   endpoint:
     shutdown:
       enabled: true
-          
+      
 swagger:
   basepackage: es.gincol.blog
-  
