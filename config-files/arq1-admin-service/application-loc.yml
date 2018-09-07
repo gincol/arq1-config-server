@@ -4,12 +4,23 @@ server:
 
 eureka:
   client:
+    registryFetchIntervalSeconds: 5
     enabled: true
     service-url:
       defaultZone: http://localhost:8761/eureka
   instance:
-     preferIpAddress: true
-          
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+  endpoint:
+    health:
+      show-details: ALWAYS
+                
 logging:  
   file: logs/${spring.application.name}.log
   level:

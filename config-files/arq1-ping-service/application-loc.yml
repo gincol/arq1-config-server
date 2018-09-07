@@ -23,7 +23,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: refresh, info, health, metrics, trace
   endpoint:
     shutdown:
       enabled: true
