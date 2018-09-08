@@ -18,7 +18,9 @@ eureka:
 
 management:
   endpoints:
-    web.exposure.include: env, metrics, trace, jolokia, info, configprops, refresh, health
+    web:
+      exposure:
+        include: refresh, info, health, metrics, trace
   endpoint:
     health:
       show-details: ALWAYS
