@@ -7,6 +7,20 @@ spring:
     user:
       name: admin
       password: admin
+  boot:
+    admin:
+      client: 
+        metadata:
+          user:
+            name: ${security.user.name}
+            password: ${security.user.password}
+      routes:
+        endpoints: env, metrics, trace, jolokia, info, configprops
+
+security:
+  user:
+    name: client
+    password: client 
     
 eureka:
   client:
@@ -19,6 +33,8 @@ eureka:
     health-check-url-path: /actuator/health
 
 management:
+  security:
+    enable: true
   endpoints:
     web:
       exposure:

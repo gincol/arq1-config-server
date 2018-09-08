@@ -13,13 +13,16 @@ logging:
     org.springframework.cloud: DEBUG
     es.gincol.blog: DEBUG
     
-#spring:
-#  boot:
-#    admin:
-#      client:
-#        url: http://arq-admin-service
+spring:
+  boot:
+    admin:
+      url: http://arq1-admin-service
+      username: admin
+      password: admin
 
 management:
+  security:
+    enable: false
   endpoints:
     web:
       exposure:
