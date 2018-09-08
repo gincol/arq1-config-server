@@ -1,5 +1,27 @@
 server:  
-  port: ${PORT:8761}   # HTTP port
+  port: 8761
+
+spring:
+  security:
+    user:
+      name: eureka
+      password: password
+
+eureka:
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+  client:
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:8761/eureka/
+
+management:
+  endpoints:
+    web.exposure.include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 logging:  
   file: logs/${spring.application.name}.log
@@ -9,7 +31,7 @@ logging:
     org.springframework.web: 'INFO'
     es.gincol.blog: 'DEBUG'
     
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
