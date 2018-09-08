@@ -10,7 +10,8 @@ eureka:
 spring:
   boot:
     admin:
-      url: http://arq1-admin-service
+#      url: http://arq1-admin-service
+       url: http://localhost:9999
 #      username: admin
 #      password: admin
 
