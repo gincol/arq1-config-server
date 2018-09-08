@@ -28,6 +28,9 @@ management:
     shutdown:
       enabled: true
 
+info:
+  version: '@project.version@'
+
 logging:
   file: logs/${spring.application.name}.log
   level:
