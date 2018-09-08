@@ -2,10 +2,11 @@
 server:  
   port: ${PORT:9999}   # HTTP port
 
-security:
-  user:
-    name: admin
-    password: admin
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
     
 eureka:
   client:
