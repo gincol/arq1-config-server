@@ -16,15 +16,15 @@ eureka:
 #      password: admin
 
 management:
-  security:
-    enabled: false
+#  security:
+#    enabled: false
   endpoints:
     web:
       exposure:
         include: refresh, info, health, metrics, trace
   endpoint:
-    health:
-      show-details: ALWAYS
+#    health:
+#      show-details: ALWAYS
     shutdown:
       enabled: true
 
