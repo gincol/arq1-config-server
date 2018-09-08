@@ -23,8 +23,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, info, health, metrics, trace
+        include: '*'
   endpoint:
+    health:
+      show-details: ALWAYS
     shutdown:
       enabled: true
       
