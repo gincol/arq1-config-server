@@ -7,12 +7,6 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
       
-logging:
-  file: logs/${spring.application.name}.log
-  level:
-    org.springframework.cloud: DEBUG
-    es.gincol.blog: DEBUG
-    
 spring:
   boot:
     admin:
@@ -21,6 +15,8 @@ spring:
 #      password: admin
 
 management:
+  security:
+    enabled: false
   endpoints:
     web:
       exposure:
@@ -30,6 +26,12 @@ management:
       show-details: ALWAYS
     shutdown:
       enabled: true
-      
+
+logging:
+  file: logs/${spring.application.name}.log
+  level:
+    org.springframework.cloud: DEBUG
+    es.gincol.blog: DEBUG
+          
 swagger:
   basepackage: es.gincol.blog
