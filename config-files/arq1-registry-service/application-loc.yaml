@@ -8,15 +8,12 @@ server:
 #      password: password
 
 eureka:
-#  instance:
-#    metadata-map:
-#      user.name: ${spring.security.user.name}
-#      user.password: ${spring.security.user.password}
+  instance:
+    leaseRenewalIntervalInSeconds: 10
   client:
-    register-with-eureka: false
-    fetch-registry: false
-#    service-url:
-#      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:8761/eureka/
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
 
 management:
   endpoints:
@@ -34,8 +31,3 @@ logging:
     org.springframework.cloud: 'DEBUG'
     org.springframework.web: 'INFO'
     es.gincol.blog: 'DEBUG'
-    
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
