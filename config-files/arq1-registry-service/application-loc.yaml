@@ -1,17 +1,6 @@
 server:  
   port: 8761
 
-spring:
-  boot:
-   admin:
-     context-path: /admin
-     
-#spring:
-#  security:
-#    user:
-#      name: eureka
-#      password: password
-
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
