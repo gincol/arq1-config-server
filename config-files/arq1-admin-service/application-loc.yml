@@ -2,6 +2,11 @@
 server:  
   port: ${PORT:9999}   # HTTP port
 
+security:
+  user:
+    name: admin
+    password: admin
+    
 eureka:
   client:
     registryFetchIntervalSeconds: 5
