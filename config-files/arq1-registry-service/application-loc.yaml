@@ -1,17 +1,17 @@
 server:  
   port: 8761
 
-spring:
-  security:
-    user:
-      name: eureka
-      password: password
+#spring:
+#  security:
+#    user:
+#      name: eureka
+#      password: password
 
 eureka:
-  instance:
-    metadata-map:
-      user.name: ${spring.security.user.name}
-      user.password: ${spring.security.user.password}
+#  instance:
+#    metadata-map:
+#      user.name: ${spring.security.user.name}
+#      user.password: ${spring.security.user.password}
   client:
     register-with-eureka: false
     fetch-registry: false
