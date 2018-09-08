@@ -5922,3 +5922,11 @@ Update your application's configuration
 2018-09-08 12:50:10.204  INFO 208 --- [http-nio-8888-exec-3] o.s.boot.SpringApplication               : Started application in 0.801 seconds (JVM running for 5001.435)
 2018-09-08 12:50:10.204  INFO 208 --- [http-nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/C:/Temp/config-repo-5249274799143434072/config-files/arq1-ping-service/application-loc.yml
 2018-09-08 12:50:10.204  INFO 208 --- [http-nio-8888-exec-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@7005e722: startup date [Sat Sep 08 12:50:10 CEST 2018]; root of context hierarchy
+2018-09-08 12:52:41.023  INFO 208 --- [http-nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Fetched for remote master and found 1 updates
+2018-09-08 12:52:41.795  INFO 208 --- [http-nio-8888-exec-5] o.s.boot.SpringApplication               : Starting application on PC0FRRDN with PID 208 (started by 0012004 in C:\Desarrollo\workareas\workarea_blog_2\arq1-config-server)
+2018-09-08 12:52:41.796  INFO 208 --- [http-nio-8888-exec-5] o.s.boot.SpringApplication               : The following profiles are active: loc
+2018-09-08 12:52:41.798  INFO 208 --- [http-nio-8888-exec-5] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3835046e: startup date [Sat Sep 08 12:52:41 CEST 2018]; root of context hierarchy
+2018-09-08 12:52:41.801  INFO 208 --- [http-nio-8888-exec-5] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-09-08 12:52:41.804  INFO 208 --- [http-nio-8888-exec-5] o.s.boot.SpringApplication               : Started application in 0.687 seconds (JVM running for 5153.024)
+2018-09-08 12:52:41.804  INFO 208 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/C:/Temp/config-repo-5249274799143434072/config-files/arq1-ping-service/application-loc.yml
+2018-09-08 12:52:41.805  INFO 208 --- [http-nio-8888-exec-5] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@3835046e: startup date [Sat Sep 08 12:52:41 CEST 2018]; root of context hierarchy
