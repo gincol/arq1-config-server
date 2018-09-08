@@ -3,24 +3,24 @@ server:
   port: ${PORT:9999}   # HTTP port
 
 spring:
-  security:
-    user:
-      name: admin
-      password: admin
+#  security:
+#    user:
+#      name: admin
+#      password: admin
   boot:
     admin:
-      client: 
-        metadata:
-          user:
-            name: ${security.user.name}
-            password: ${security.user.password}
+#      client: 
+#        metadata:
+#          user:
+#            name: ${security.user.name}
+#            password: ${security.user.password}
       routes:
         endpoints: env, metrics, trace, jolokia, info, configprops
 
-security:
-  user:
-    name: client
-    password: client 
+#security:
+#  user:
+#    name: client
+#    password: client 
     
 eureka:
   client:
@@ -32,16 +32,16 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     health-check-url-path: /actuator/health
 
-management:
-  security:
-    enable: true
-  endpoints:
-    web:
-      exposure:
-        include: "*"  
-  endpoint:
-    health:
-      show-details: ALWAYS
+#management:
+#  security:
+#    enable: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"  
+#  endpoint:
+#    health:
+#      show-details: ALWAYS
                 
 logging:  
   file: logs/${spring.application.name}.log
