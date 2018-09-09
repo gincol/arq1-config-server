@@ -12,6 +12,9 @@ management:
     health:
       show-details: ALWAYS
 
+variable:
+  changing: cambiame 
+
 logging:
   file: logs/${spring.application.name}.log
   level:
