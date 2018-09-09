@@ -7,34 +7,25 @@ ping:
     pingUrl: http://${ping.service.name}/ping/doPing/
 
 eureka:
-  instance:
-    hostname: localhost
-    health-check-url-path: /actuator/health
-    status-page-url-path: /actuator/info
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
           
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, info, health, metrics, trace
+
 logging:  
   file: logs/${spring.application.name}.log
   level:
     org.springframework.cloud: 'DEBUG'
     es.gincol.blog: 'DEBUG'
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh, info, health, metrics, trace
-  endpoint:
-    health:
-      show-details: ALWAYS
-
-info:
-  version: '@project.version@'
-            
 swagger:
   basepackage: es.gincol.blog
   
 mongeez:
   initialLoadingFile: mongeez.xml  
+  
