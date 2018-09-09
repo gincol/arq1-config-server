@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: ${PORT:8888}
 
 spring:
   application:
@@ -29,14 +29,6 @@ management:
     web:
       exposure:
         include: refresh, info, health, metrics, trace
-  endpoint:
-    health:
-      show-details: ALWAYS
-    shutdown:
-      enabled: true
-            
-info:
-  version: '@project.version@'
               
 logging:  
   file: logs/${spring.application.name}.log
