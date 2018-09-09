@@ -3,9 +3,6 @@ server:
   
 eureka:
   instance:
-    hostname: localhost
-    health-check-url-path: /actuator/health
-    status-page-url-path: /actuator/info
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
@@ -15,12 +12,6 @@ management:
     web:
       exposure:
         include: refresh, info, health, metrics, trace
-  endpoint:
-    health:
-      show-details: ALWAYS
-
-info:
-  version: '@project.version@'
 
 logging:
   file: logs/${spring.application.name}.log
