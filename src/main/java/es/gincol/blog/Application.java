@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.core.env.Environment;
@@ -14,7 +15,7 @@ import org.springframework.core.env.SimpleCommandLinePropertySource;
 
 import es.gincol.blog.utils.Constants;
 
-@SpringBootApplication
+@SpringBootApplication//(exclude = { RabbitAutoConfiguration.class })
 @EnableConfigServer
 @EnableDiscoveryClient
 public class Application {
