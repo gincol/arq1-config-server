@@ -16,6 +16,11 @@ spring:
           force-pull: true
 #          username: gines
 #          password: g1ncOlgit
+  rabbitmq:
+    host: 192.168.99.100
+    port: 5672
+    username: user
+    password: password
 
 eureka:
 #  instance:
@@ -37,12 +42,6 @@ management:
     health:
       show-details: ALWAYS
 
-rabbitmq:
-    host: 192.168.99.100
-    port: 5672
-    username: user
-    password: password
-                  
 logging:  
   file: logs/${spring.application.name}.log
   level:

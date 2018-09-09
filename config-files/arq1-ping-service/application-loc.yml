@@ -13,7 +13,7 @@ management:
       show-details: ALWAYS
 
 variable:
-  changing: cambiame 
+  changing: cambiame ya, por favor
 
 logging:
   file: logs/${spring.application.name}.log
