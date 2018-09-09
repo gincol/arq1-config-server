@@ -66,10 +66,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-monitor</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!-- En lugar de tomcat -->
 		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-undertow</artifactId> 

@@ -16,6 +16,9 @@ spring:
           force-pull: true
 #          username: gines
 #          password: g1ncOlgit
+        monitor:
+          github:
+            enabled: true
   rabbitmq:
     host: 192.168.99.100
     port: 5672
