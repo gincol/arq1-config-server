@@ -1,46 +1,20 @@
-# HTTP Server
 server:  
-  port: ${PORT:9999}   # HTTP port
+  port: ${PORT:9999}
 
 spring:
-#  security:
-#    user:
-#      name: admin
-#      password: admin
+  security:
+    user:
+      name: admin
+      password: password
   boot:
     admin:
-#      client: 
-#        metadata:
-#          user:
-#            name: ${security.user.name}
-#            password: ${security.user.password}
-      routes:
-        endpoints: env, metrics, trace, jolokia, info, configprops
+      discovery:
+        ignored-services: arq1-admin-service
 
-#security:
-#  user:
-#    name: client
-#    password: client 
-    
 eureka:
   client:
-    registryFetchIntervalSeconds: 10
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-    health-check-url-path: /actuator/health
-
-#management:
-#  security:
-#    enable: true
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"  
-#  endpoint:
-#    health:
-#      show-details: ALWAYS
+      defaultZone: http://eureka:password@localhost:8761/eureka/
                 
 logging:  
   file: logs/${spring.application.name}.log

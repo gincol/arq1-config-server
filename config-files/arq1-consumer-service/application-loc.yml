@@ -1,21 +1,36 @@
 server:  
   port: ${PORT:2222} 
-  
-ping:  
-  service:
-    name: arq1-ping-service
-    pingUrl: http://${ping.service.name}/ping/doPing/
 
+spring:
+  security:
+    user:
+      name: consumer
+      password: password
+        
 eureka:
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka:password@localhost:8761/eureka/
           
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, info, health, metrics, trace
+        include: '*'
+        exclude:
+          - env
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+ping:  
+  service:
+    name: arq1-ping-service
+    pingUrl: http://${ping.service.name}/ping/doPing/
 
 logging:  
   file: logs/${spring.application.name}.log

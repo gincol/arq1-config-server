@@ -1,16 +1,31 @@
 server:  
   port: 8761
 
+spring:
+  security:
+    user:
+      name: eureka
+      password: password
+      
 eureka:
+  instance:
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
   client:
-    fetchRegistry: false
-    registerWithEureka: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:8761/eureka/
     
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, info, health, metrics, trace
+        include: '*'
+        exclude:
+          - env
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 logging:  
   file: logs/${spring.application.name}.log
