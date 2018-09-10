@@ -31,7 +31,7 @@ management:
       show-details: ALWAYS
 
 variable:
-  changing: cambiandoando
+  changing: cambiando
 
 logging:
   file: logs/${spring.application.name}.log
