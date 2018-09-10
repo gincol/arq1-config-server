@@ -62,9 +62,7 @@
 		</dependency>
 
 		<!-- Refresco en caliente -->
-			<!-- <dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-bus-amqp</artifactId> 
 			</dependency> -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -73,7 +71,10 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+			<version>1.2.1.RELEASE</version>
 		</dependency>
+		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-stream-rabbit</artifactId> 
+			</dependency> -->
 
 		<!-- En lugar de tomcat -->
 		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-undertow</artifactId> 
