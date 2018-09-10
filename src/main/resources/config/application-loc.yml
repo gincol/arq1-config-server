@@ -10,7 +10,8 @@ spring:
     config:
       server:
         git:
-          uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
+          #uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
+          uri: https://github.com/gincol/arq1-config-server.git
           searchPaths: 'config-files/{application}'
           clone-on-start: true
           force-pull: true
