@@ -10,6 +10,7 @@ spring:
     bus:
       enabled: true
     config:
+      profile: loc
       server:
         git:
           #uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
