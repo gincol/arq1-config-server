@@ -13,7 +13,7 @@ management:
       show-details: ALWAYS
 
 variable:
-  changing: muy cambiadisima
+  changing: muy cambiada
 
 logging:
   file: logs/${spring.application.name}.log
