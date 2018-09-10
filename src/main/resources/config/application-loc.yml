@@ -7,10 +7,7 @@ spring:
   profiles:
     active: loc
   cloud:
-    bus:
-      enabled: true
     config:
-      profile: loc
       server:
         git:
           #uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
@@ -20,7 +17,9 @@ spring:
           force-pull: true
 #          username: gines
 #          password: g1ncOlgit
-
+        monitor:
+          github:
+            enabled: true
   rabbitmq:
     host: 192.168.99.100
     port: 5672
