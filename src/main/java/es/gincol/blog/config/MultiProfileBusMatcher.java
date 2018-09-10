@@ -34,7 +34,7 @@ public class MultiProfileBusMatcher implements PathMatcher {
 
 	public boolean matchMultiProfile(String event, String applicationContextID) {
 
-		event = "*:**";
+		event = "*";
 		
 		LOGGER.info("custom matchMultiProfile : {} , {}", event, applicationContextID);
 
