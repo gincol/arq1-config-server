@@ -31,7 +31,7 @@ management:
       show-details: ALWAYS
 
 variable:
-  changing: ahora si cambia desde gitlab
+  changing: cambiado y funcionando
 
 logging:
   file: logs/${spring.application.name}.log
