@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8889}
+  port: ${PORT:8889} #usamos un puerto no standard (8888) para verificar que todos los clientes conectan bien
 
 spring:
   application:
@@ -10,14 +10,18 @@ spring:
     config:
       server:
         git:
-          #uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
-          uri: https://github.com/gincol/arq1-config-server.git
+          uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
+#          uri: https://github.com/gincol/arq1-config-server.git
+#  No funciona de forma correcta con refresco rabbitmq
 #          searchPaths: 'config-files/{application}'
+#  Si funciona de forma correcta con refresco rabbitmq
           searchPaths: 'config-files/{profile}'
           clone-on-start: true
           force-pull: true
+#  No necesario al ser publico
 #          username: gines
 #          password: g1ncOlgit
+#  No necesario
 #        monitor:
 #          github:
 #            enabled: true
@@ -32,10 +36,6 @@ spring:
     password: password
 
 eureka:
-#  instance:
-#    metadata-map:
-#      user.name: ${spring.security.user.name}
-#      user.password: ${spring.security.user.password}
   client:
     service-url:
       defaultZone: http://eureka:password@localhost:8761/eureka/
