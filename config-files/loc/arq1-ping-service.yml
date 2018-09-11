@@ -1,0 +1,43 @@
+server:
+  port: ${PORT:8089}
+
+spring:
+  rabbitmq:
+    host: 192.168.99.100
+    port: 5672
+    username: user
+    password: password
+
+  cloud:
+    config:
+      server:
+        monitor:
+          github:
+            enabled: true
+          bitbucket:
+            enabled: false
+          gitlab:
+            enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude:
+          - env
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+variable:
+  changing: cambiandos
+
+logging:
+  file: logs/${spring.application.name}.log
+  level:
+    org.springframework.cloud: DEBUG
+    es.gincol.blog: DEBUG
+          
+swagger:
+  basepackage: es.gincol.blog

@@ -1,0 +1,21 @@
+server:  
+  port: 8761
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude:
+          - env
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+logging:  
+  file: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    org.springframework.web: 'INFO'
+    es.gincol.blog: 'DEBUG'

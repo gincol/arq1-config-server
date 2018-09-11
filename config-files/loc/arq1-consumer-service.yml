@@ -1,0 +1,31 @@
+server:  
+  port: ${PORT:2222} 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude:
+          - env
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+ping:  
+  service:
+    name: arq1-ping-service
+    pingUrl: http://${ping.service.name}/ping/doPing/
+
+logging:  
+  file: logs/${spring.application.name}.log
+  level:
+    org.springframework.cloud: 'DEBUG'
+    es.gincol.blog: 'DEBUG'
+
+swagger:
+  basepackage: es.gincol.blog
+  
+mongeez:
+  initialLoadingFile: mongeez.xml  
+  

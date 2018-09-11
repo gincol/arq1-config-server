@@ -12,11 +12,19 @@ spring:
         git:
           #uri: https://gitlab.com/gincol-blog-2/arq1-config-server.git
           uri: https://github.com/gincol/arq1-config-server.git
-          searchPaths: 'config-files/{application}'
+#          searchPaths: 'config-files/{application}'
+          searchPaths: 'config-files/{profile}'
           clone-on-start: true
           force-pull: true
 #          username: gines
 #          password: g1ncOlgit
+#        monitor:
+#          github:
+#            enabled: true
+#          bitbucket:
+#            enabled: false
+#          gitlab:
+#            enabled: false
   rabbitmq:
     host: 192.168.99.100
     port: 5672
