@@ -31,7 +31,7 @@ management:
       show-details: ALWAYS
 
 variable:
-  changing: cambiado y funcionando
+  changing: cambiado y funcionando en todos los nodos
 
 logging:
   file: logs/${spring.application.name}.log
