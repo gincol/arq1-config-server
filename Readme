@@ -1,1 +1,6 @@
 ngrok http 8888
+
+Es fundamental la estructura de carpeta y ficheros para que funcione vía rabbitmq
+De forma standard actualiza los ficheros con nombre de aplicación, o bien con el genérico "application.yml".
+Por ello es mejor ubicar los fichero con el nombre de la aplicación, aunque para separarlos por entorno (profile active)
+se ha de poner en una carpeta con el nombre del profile (loc, des, dev....) 
