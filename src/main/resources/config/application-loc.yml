@@ -22,13 +22,13 @@ spring:
 #          username: gines
 #          password: g1ncOlgit
 #  No necesario
-#        monitor:
-#          github:
-#            enabled: true
-#          bitbucket:
-#            enabled: false
-#          gitlab:
-#            enabled: false
+        monitor:
+          github:
+            enabled: false
+          bitbucket:
+            enabled: false
+          gitlab:
+            enabled: true
   rabbitmq:
     host: 192.168.99.100
     port: 5672
